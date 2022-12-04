@@ -1,0 +1,398 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+section#flex-parent{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+header{
+  grid-column: 1 /span 2;
+  background-color: #000;
+  height: 3rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding-left: 1em;
+}
+
+header h3#logotitle{
+    color: #fff;
+}
+
+.combostyle{
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100vh;
+    background-color: #f3f4f6;
+}
+
+.asidestyle{
+
+    display: flex;
+    flex-flow: column wrap;
+    background: #ececec;
+    padding-top: 1em;
+    width:15%;
+}
+
+.menucombo{
+    display: flex;
+    flex-flow: row nowrap;
+    padding: .5em;
+}
+header img{
+    width: 2em;
+    margin-right: 1em;
+}
+aside div.menucombo img{
+     width: 1.3em;
+     margin-right: .7em;
+}
+
+aside div.menucombo button{
+    border: none;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+section#changearea{
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-self: center;
+    width:100%;
+    
+}
+section#changearea form {
+    display: flex;
+    flex-flow: column wrap;
+    width: 40%;
+    padding: 2em 3em 3em 3em;
+    margin: 4em;
+    border: .15em solid #000;
+    border-radius: 1em;
+    align-self: center;
+    justify-self: center;
+}
+
+section#changearea form#adduser, form#addissue{
+    display: flex;
+    flex-flow: column wrap;
+    width: 60%;
+    padding: 2em 3em 3em 3em;
+    margin: 2em;
+    border: .15em solid #000;
+    border-radius: 1em;
+    justify-self: center;
+    align-self: center;
+
+}
+
+.issuetable{
+    width: 80%;
+    margin: 2em;
+    justify-self: center;
+    align-self: center;
+    vertical-align: middle;
+    text-align: left;
+    border-collapse: collapse;
+}
+table#issuetable thead{
+    background: #ececec;
+    margin-right: 1em;
+}
+
+table#issuetable thead th:nth-child(3){
+    text-align: center;
+}
+
+table#issuetable tr td a{
+    color: #3498DB;
+    text-decoration: none;
+}
+
+table#issuetable tr td span.ticketnum{
+    font-weight: bold;
+}
+
+table#issuetable tr td{
+    margin-bottom: 2em;
+    margin-top: 2em;
+    padding-bottom: 1em;
+    border-bottom: solid #ececec .1em; 
+
+}
+
+table#issuetable tr td#open, table#issuetable tr td#inprog, table#issuetable tr td#closed{
+    text-align:center;
+}
+
+table#issuetable tr td#open span{
+    background: #1434A4;
+    color: #fff;
+    text-align: center;
+    border-radius: .5em;
+    padding:0 1em 0 1em;
+}
+
+table#issuetable tr td#inprog span{
+    background: #ffdb58;
+    color: #000;
+    text-align: center;
+    border-radius: .5em;
+    padding:0 1em 0 1em;
+}
+
+table#issuetable tr td#closed span{
+    background: #ff0000;
+    color: #fff;
+    text-align: center;
+    border-radius: .5em;
+    padding:0 1em 0 1em;
+
+}
+
+section#issuelistheaduniverse{
+    display: flex;
+    flex-flow: column wrap;
+    width:80%;
+   
+}
+
+section.issuelistheadparent{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width:100%;
+    margin-top:2em;
+}
+
+section.issuelistheadparent h1.issuelisthead{
+    text-align: left;
+    font-size: 3em;
+}
+
+section.issuelistheadparent button#createissuebtn{
+    padding: .5em;
+    border:none;
+    border-radius: .5em;
+    width: 12em;
+    color: #fff;
+    background:#4bb543;
+}
+
+section.issuelistheadparent button#createissuebtn:hover{
+    transition: all 0.5s ease-in-out;
+    background: #fff;
+    color: #000;
+    border: solid #4bb543 .2em;
+}
+
+section#filter{
+    display: flex;
+    flex-flow: row nowrap;
+    width:30%;
+    margin-top: 2em;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+section#filter span{
+    padding-top: 0.3em;
+}
+
+section#filter button{
+    background: none;
+    border: none;
+    border-radius: .3em;
+    padding: .5em;
+    transition: all 0.5s ease-in-out;
+    font-weight:bold;
+}
+
+section#filter button#all:hover{
+    background: #1434a4;
+    color: #fff;
+}
+
+section#filter button#open:hover{
+    background: #4bb543;
+    color: #fff;
+}
+
+section#filter button#mytickets:hover{
+    background: #ffdb58;
+    color: #000;
+}
+
+
+.hide{
+    display: none;
+}
+
+.fail{
+    display: block;
+    background: #ff9494;
+    color: #8B0000;
+    margin-bottom: 1em;
+    padding: .5em;
+    border-radius: 1em;
+}
+.success{
+    display: block;
+    background: #4bb543;
+    color: #fff;
+     margin-bottom: 1em;
+    padding: .5em;
+    border-radius: 1em;
+}
+
+section#changearea form div.formgrp{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+section#changearea form h2.formtitle{
+    margin-bottom: 1em;
+}
+.inputnormal{
+    height:3em;
+    border-radius: 1em;
+    border:none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    margin-bottom:1em;
+    padding-left: 1em;
+}
+
+.txtANormal{
+    border-radius: 1em;
+    border:none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    margin-bottom:1em;
+    padding: 1em;
+}
+
+.inputerror{
+
+    height:3em;
+    border-radius: 1em;
+    border:none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, #ff9494 0px 0px 0px 1px inset;
+    margin-bottom:1em;
+    padding-left: 1em;
+
+}
+
+.txtAErr{
+    border-radius: 1em;
+    border:none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, #ff9494 0px 0px 0px 1px inset;
+    margin-bottom:1em;
+    padding-left: 1em;
+}
+
+button#submitbtn, button#adduserbtn, button#addissuebtn{
+    background: #0096FF;
+    color: #fff;
+    width: 30%;
+    height:2em;
+    border-radius: .5em;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    border: none;
+}
+
+button#submitbtn:hover, button#adduserbtn:hover, button#addissuebtn:hover{
+    background: #1434A4;
+}
+
+div#issueparent{
+    display: flex;
+    flex-flow: column wrap;
+    width: 90%;
+    justify-self: center;
+}
+
+#issuehead, #contentcombo, #issuemetasec, #issueaside, #infobox, .infogrp{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#issuehead{
+    width: 90%;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+#issuehead span{
+    font-weight: bold;
+}
+
+#issuehead h1{
+    font-size: 2em;
+}
+#issuebody{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 90%;
+}
+
+#issuebody  #contentcombo{
+    width: 75%;
+}
+
+#issuebody  #contentcombo article#description{
+    padding: 2em 2em 2em 0em;
+}
+
+#issuebody  #contentcombo section#issuemetasec{
+    margin-top: 3em;
+}
+#issuebody  #contentcombo section#issuemetasec p{
+    
+    color: #999;
+}
+
+#issuebody  #contentcombo section#issuemetasec p span{
+    color: #000;
+}
+
+#issuebody  #issueaside{
+    width: 25%;
+}
+
+#issueaside span.label{
+    font-weight: bold;
+}
+
+#issueaside button{
+    width: 10em;
+    padding: .5em;
+    color: #fff;
+    border: none;
+    border-radius: .5em;
+}
+
+#issueaside button#mkasclose{
+    background: #1434A4;
+    margin: 1em;
+}
+
+#issueaside button#mkinpro{
+    background: #229954; 
+    margin: 0 1em 1em 1em;
+}
+
+#infobox{
+    background: #ececec;
+    padding: 2em;
+}
+
+.infogrp{
+    margin-bottom: 1em;
+}
