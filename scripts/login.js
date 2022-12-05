@@ -78,15 +78,15 @@ window.addEventListener("load", event => {
                     document.querySelector("div#combo").classList.add("combostyle");
                     changearea.style.width="85%";
                     changearea.innerHTML = "";
-                    const listUrl = new URL('http://localhost/info2180-finalproject/scripts/issuelist.php');
+                    const listUrl = new URL('http://localhost/info2180-finalproject/scripts/home.php');
                     let params = {btn: "all"};
                     listUrl.search = new URLSearchParams(params).toString();
                     fetch(listUrl, {method : 'GET'})
                     .then(resp => resp.text())
                     .then(resp=>{
-                       // let parsedDom = parserObj.parseFromString(resp, "text/html");
+                       
                         changearea.innerHTML =resp;
-                        document.querySelector("table#issuetable").classList.add("issuetable");
+                        document.querySelector("table#contacttable").classList.add("contacttable");
                     })
 
 
