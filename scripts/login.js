@@ -2,16 +2,17 @@ window.addEventListener("load", event => {
     const emailField = document.querySelector("input[type='email']");
     const passwordField = document.querySelector("input[type='password']");
     const formstatus = document.querySelector("section#changearea form div.formstatus");
+    const footer = document.getElementById("footer");
     formstatus.classList.add("hide");
     const submitbtn = document.querySelector("section#changearea form button#submitbtn");
     const changearea= document.querySelector("section#changearea");
     const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ ;
-    //const parserObj = new DOMParser();
+    
     const errors =[
-        "This account was not found, Contact your administrator for help.",
-        "Invalid Password, check your info and try again",
-        "You did not provide a valid, please check and try again",
-        "We are unable to start your session at this time. Try again later"
+        "This account was not found in our system. Contact your administrator for more help.",
+        "Password entered is invalid. Recheck your information and try again later.",
+        "Email enetered is invalid. Recheck your information and try again later.",
+        "Unable to start the session at this time. Try again later."
     ];
     submitbtn.addEventListener("click", event => {
 
@@ -67,12 +68,31 @@ window.addEventListener("load", event => {
             })
             .then(resp => resp.text())
             .then(resp =>{
+                let first = resp.substring(0, resp.indexOf('*'));
+                let role = resp.substring(resp.indexOf('*') + 1);
                 if (parseInt(resp) === 0 || parseInt(resp) === 1 || parseInt(resp) === 2 || parseInt(resp) === 3){
                     formstatus.classList.remove("hide");
                     formstatus.classList.add("fail");
                     formstatus.innerHTML = errors[parseInt(resp)];
+                    if(parseInt(first) === 0){
+                        formstatus.classList.remove("hide");
+                        formstatus.classList.remove("success");
+                        formstatus.classList.add("fail");
+                        emailField.classList.remove("inputnormal");
+                        emailField.classList.add("inputerror");
+                        passwordField.classList.remove("inputerror");
+                        passwordField.classList.add("inputnormal");
+                    }
                 }
                 else if (parseInt(resp) === 4){
+                    let usercheck = setInterval( ()=>{
+                        if (document.contains(document.getElementById("viewusers"))){
+                            clearInterval(usercheck);
+                            if(role == "Member"){
+                                document.getElementById("adminonly").classList.add("hide");
+                            }
+                        }
+                    }, 0);
                     document.getElementsByTagName("aside")[0].classList.remove("hide");
                     document.getElementsByTagName("aside")[0].classList.add("asidestyle");
                     document.querySelector("div#combo").classList.add("combostyle");
