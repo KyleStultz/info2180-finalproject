@@ -7,8 +7,8 @@
         <meta name= "viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet"  href="styles/styles.css"/>
         <script src="scripts/login.js"> </script>
-        <script src="scripts/logout.js"> </script>
-        <script src="scripts/homepage.js"> </script>
+        <script src="scripts/UserLogout.js"> </script>
+        <script src="scripts/home.js"> </script>
         <script src="scripts/newcontact.js"> </script>
         <script src="scripts/newnote.js"> </script>
         <script src="scripts/viewcontact.js"> </script>
