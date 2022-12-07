@@ -10,10 +10,9 @@
         <script src="scripts/UserLogout.js"> </script>
         <script src="scripts/home.js"> </script>
         <script src="scripts/newcontact.js"> </script>
-        <script src="scripts/newnote.js"> </script>
         <script src="scripts/viewcontact.js"> </script>
         <script src="scripts/viewusers.js"> </script>
-        <script src="scripts/newuser.js"> </script>
+        <script src="scripts/adduser.js"> </script>
         <script src="scripts/updatecontact.js"> </script>
         <title>Dolphin CRM</title>
     </head>
