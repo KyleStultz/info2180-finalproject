@@ -30,6 +30,17 @@ header h3#logotitle{
     background-color: #f3f4f6;
 }
 
+header img{
+    width: 2em;
+    margin-right: 1em;
+}
+
+body{
+    margin: 0%;
+    background-image: url(background.jpg);
+    background-size: cover;
+}
+
 .asidestyle{
 
     display: flex;
@@ -44,10 +55,7 @@ header h3#logotitle{
     flex-flow: row nowrap;
     padding: .5em;
 }
-header img{
-    width: 2em;
-    margin-right: 1em;
-}
+
 aside div.menucombo img{
      width: 1.3em;
      margin-right: .7em;
