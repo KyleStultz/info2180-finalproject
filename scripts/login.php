@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" ){
     }
     else{
         $password = $data->password;
-        $sql = "SELECT * FROM userstable WHERE email= :email";
+        $sql = "SELECT * FROM users WHERE email= :email";
         $stmt = $conn->prepare($sql);
         $stmt->execute(array(':email' =>  $cleanedemail));
         $record = $stmt->fetch(PDO::FETCH_ASSOC);

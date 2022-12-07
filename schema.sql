@@ -58,4 +58,4 @@ CREATE TABLE notes (
     created_at datetime(6) NOT NULL DEFAULT current_timestamp()
 ) ENGINE=MyISAM AUTO_INCREMENT=1;
 
-INSERT INTO `userstable` (`firstname`, `lastname`, `password`, `email`,`role` ,`created_at`) VALUES ('user1', 'admin', '$2y$10$J32K.bB0.0s/PUfcrTN/OOzkdUpG3Jwl8uml/QrejVAGkIiMzb5O.', 'admin@project2.com','admin', current_timestamp());
+INSERT INTO `users` (`firstname`, `lastname`, `password`, `email`,`role` ,`created_at`) VALUES ('user1', 'admin', '$2y$10$J32K.bB0.0s/PUfcrTN/OOzkdUpG3Jwl8uml/QrejVAGkIiMzb5O.', 'admin@project2.com','admin', current_timestamp());
